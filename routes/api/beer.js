@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const axios = require("axios");
+const apiKey = require("../../config/keys");
 
 // @route   GET api/beer/search
 // @desc    Get beer by search
@@ -13,7 +14,7 @@ router.get("/search", (req, res) => {
     .get(
       `https://sandbox-api.brewerydb.com/v2/search?q=${query}&withBreweries=y&type=beer&p=${
         req.query.page
-      }&key=7a974ed62b524a9219ec1cf17b64ca34&format=json`
+      }&key=${apiKey}&format=json`
     )
     .then(response => {
       res.json(response.data);
@@ -32,7 +33,7 @@ router.get("/id=:id", (req, res) => {
     .get(
       `https://sandbox-api.brewerydb.com/v2/beer/${
         req.params.id
-      }?key=7a974ed62b524a9219ec1cf17b64ca34&withBreweries=y&format=json`
+      }?key=${apiKey}&withBreweries=y&format=json`
     )
     .then(response => {
       res.json(response.data);
@@ -51,7 +52,7 @@ router.get("/style", (req, res) => {
 
   axios
     .get(
-      `https://sandbox-api.brewerydb.com/v2/beers?key=7a974ed62b524a9219ec1cf17b64ca34&withBreweries=y&styleId=${styleId}&format=json`
+      `https://sandbox-api.brewerydb.com/v2/beers?key=${apiKey}&withBreweries=y&styleId=${styleId}&format=json`
     )
     .then(response => {
       res.json(response.data.data);
@@ -70,7 +71,7 @@ router.get("/brewery/id=:id", (req, res) => {
     .get(
       `https://sandbox-api.brewerydb.com/v2/brewery/${
         req.params.id
-      }?key=7a974ed62b524a9219ec1cf17b64ca34&format=json`
+      }?key=${apiKey}&format=json`
     )
     .then(response => {
       console.log(response.data);
