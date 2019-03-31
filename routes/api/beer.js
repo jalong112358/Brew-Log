@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const axios = require("axios");
-const apiKey = require("../../config/keys");
+const apiKey = require("../../config/keys").apiKey;
 
 // @route   GET api/beer/search
 // @desc    Get beer by search
