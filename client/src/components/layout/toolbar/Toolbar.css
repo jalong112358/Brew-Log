@@ -1,0 +1,97 @@
+.toolbar {
+  position: fixed;
+  width: 100%;
+  height: 65px;
+  background: rgb(30, 30, 30);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+.toolbar .logo {
+  width: 150px;
+}
+
+.toolbar .search-icon {
+  display: none;
+}
+.toolbar form {
+  display: flex;
+  height: 65px;
+  padding: 10px 0;
+}
+
+.toolbar form input {
+  width: 350px;
+  height: 100%;
+  padding-left: 15px;
+  border-radius: 10px 0 0 10px;
+  color: rgb(200, 200, 200);
+  font-size: 14px;
+  border: 1px solid rgb(200, 200, 200);
+  border-right: none;
+  background: none;
+}
+.toolbar form i {
+  color: rgb(200, 200, 200);
+}
+.toolbar form button {
+  height: 100%;
+  padding: 0 10px;
+  border-radius: 0 10px 10px 0;
+  color: rgb(200, 200, 200);
+  font-size: 16px;
+  border: 1px solid rgb(200, 200, 200);
+  border-left: none;
+  background: none;
+}
+
+.toolbar input::placeholder {
+  color: rgb(200, 200, 200);
+}
+
+.toolbar input:focus {
+  outline-width: 0;
+}
+
+@media only screen and (max-width: 750px) {
+  .toolbar .wrapper-for-mobile {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .toolbar {
+    padding: 0 25px;
+  }
+  .toolbar form {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    align-items: center;
+    width: 75%;
+    background: rgb(31, 31, 31);
+    transform: translateX(-100%);
+    padding-left: 10px;
+    transition: transform 500ms ease;
+  }
+  .toolbar form.open {
+    transform: translateX(0);
+    transition: transform 500ms ease;
+  }
+  .toolbar form input {
+    width: 100%;
+    height: 100%;
+  }
+  .toolbar form button {
+    height: 100%;
+  }
+  .toolbar .search-icon {
+    display: block;
+    color: rgb(200, 200, 200) !important;
+  }
+  .toolbar .search-icon i {
+    color: rgb(200, 200, 200);
+  }
+}

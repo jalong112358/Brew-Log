@@ -1,0 +1,32 @@
+.brewery-content {
+}
+
+.brewery-content .brewery-heading {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.brewery-content img {
+  align-self: flex-start;
+  width: 350px;
+}
+
+.brewery-content .brewery-info a {
+  color: rgb(194, 121, 20);
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.brewery-content .brewery-info a:hover {
+  text-decoration: underline;
+}
+
+.brewery-description {
+  width: 100%;
+  max-width: 700px;
+  line-height: 25px;
+}

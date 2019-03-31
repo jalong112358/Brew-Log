@@ -1,0 +1,86 @@
+.beer-feed {
+  margin-bottom: 50px;
+}
+.beer-item {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 25px 0;
+  border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.beer-item .img-wrapper {
+  display: block;
+  width: 100px;
+  min-width: 100px;
+  margin-right: 25px;
+}
+
+.beer-item .img-wrapper img {
+  width: 100%;
+}
+
+.beer-item .beer-info .beer-name {
+  text-decoration: none;
+  font-size: 18px;
+  margin-right: 10px;
+  color: rgb(194, 121, 20);
+  cursor: pointer;
+}
+.beer-item .beer-info .beer-name:hover {
+  text-decoration: underline;
+}
+
+.beer-item .beer-info .brewery-name {
+  text-decoration: none;
+  font-size: 14px;
+
+  color: rgb(100, 100, 100);
+  cursor: pointer;
+}
+.beer-item .beer-info .brewery-name:hover {
+  text-decoration: underline;
+}
+
+.beer-item .beer-info .beer-abv {
+  text-decoration: none;
+  font-size: 14px;
+  margin: 10px 0;
+  color: rgb(100, 100, 100);
+}
+.beer-item .beer-info .beer-description {
+  text-decoration: none;
+  font-size: 16px;
+  margin: 10px 0;
+  color: rgb(100, 100, 100);
+}
+
+.page-indicator {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.page-indicator ul li {
+  display: inline-block;
+
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.page-indicator ul {
+  list-style: none;
+  margin: 0 10px;
+}
+.page-indicator ul li.active {
+  background: rgb(30, 30, 30);
+  color: rgb(200, 200, 200);
+}
+.page-indicator button {
+  width: 50px;
+}

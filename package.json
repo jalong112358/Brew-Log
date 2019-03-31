@@ -1,0 +1,25 @@
+{
+  "name": "beer-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "brewerydb-node": "0.0.1",
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "graphql-request": "^1.8.2",
+    "nodemon": "^1.18.10"
+  }
+}
